@@ -1,0 +1,7 @@
+- name: Etcd3 module test
+  hosts: "{{ target_hosts | default('localhost') }}"
+
+  tasks:
+    - name: Verify remote etcd connections
+      community.general.etcd3:
+        endpoints: 172.24.9.148
